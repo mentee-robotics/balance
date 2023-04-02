@@ -1,0 +1,19 @@
+200: left_shoulder_pitch
+201: left_shoulder_roll
+202: left_shoulder_yaw
+203: left_elbow
+204: left_wrist_pitch
+205: left_wrist_yaw
+206: left_wrist_roll
+
+207: right_shoulder_pitch
+208: right_shoulder_roll
+209: right_shoulder_yaw
+210: right_elbow
+211: right_wrist_pitch
+212: right_wrist_yaw
+213: right_wrist_roll
+
+
+
+#NEW 31.1.23: was added for new arm experimental setup

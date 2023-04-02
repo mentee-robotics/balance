@@ -1,0 +1,6 @@
+defaults:
+  - motors: ["upper_body_motor_no_ros_set_actions"]
+#  - imus: ["sim_imu"]             #value!
+#  # - distances: ["default"]        #value!
+  - teleops: ["default"]          #value!
+#  - contact: ["default"]          #value!

@@ -1,0 +1,5 @@
+defaults:
+  - motors: ["default"]
+  - distances: ["default"]
+  - teleops: ["default"]
+  - contact: ["default"]

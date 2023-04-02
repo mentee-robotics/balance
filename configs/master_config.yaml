@@ -1,0 +1,254 @@
+states:
+  dofs:
+    cls: DofStateManagerNoROS
+    motors: ${...sensors.motors}
+  command:
+    cls: CommandStateHandler
+    command: ${...sensors.teleops}
+  joy_command:
+    cls: JoystickCommandStateHandler
+    command: ${...sensors.teleops}
+sensors:
+  motors:
+    upper_body:
+      init_position:
+        right_shoulder_pitch: 0.0
+        right_shoulder_roll: 0.0
+        right_shoulder_yaw: 0.0
+        right_elbow: 0.0
+        right_wrist_pitch: 0.0
+        right_wrist_yaw: 0.0
+        right_wrist_roll: 0.0
+      joints_params:
+        right_shoulder_pitch:
+          init_params:
+            default_kd: 50
+            default_kp: 100
+            default_max_torque: 90.0
+            init_kd: 50
+            init_kp: 50
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 1.25
+            min_position: -1.25
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        right_shoulder_roll:
+          init_params:
+            default_kd: 50
+            default_kp: 100
+            default_max_torque: 90.0
+            init_kd: 50
+            init_kp: 50
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 1.9
+            min_position: -1
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        right_shoulder_yaw:
+          init_params:
+            default_kd: 65.0
+            default_kp: 65.0
+            default_max_torque: 50.0
+            init_kd: 30.0
+            init_kp: 40.0
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 1.5
+            min_position: -1.4
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        right_elbow:
+          init_params:
+            default_kd: 50
+            default_kp: 100
+            default_max_torque: 30.0
+            init_kd: 50
+            init_kp: 100
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 1.7
+            min_position: -1.7
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        right_wrist_pitch:
+          init_params:
+            default_kd: 1.5
+            default_kp: 40
+            default_max_torque: 50.0
+            init_kd: 1.5
+            init_kp: 40
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 10
+            min_position: -10
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        right_wrist_yaw:
+          init_params:
+            default_kd: 1.5
+            default_kp: 40
+            default_max_torque: 50.0
+            init_kd: 1.5
+            init_kp: 40
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 10
+            min_position: -10
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        right_wrist_roll:
+          init_params:
+            default_kd: 1.5
+            default_kp: 40
+            default_max_torque: 50.0
+            init_kd: 1.5
+            init_kp: 40
+          kalman_filter:
+            pos_variance: 8.2e-08
+            transition_factor: 0.01
+            vel_variance: 4.05e-05
+          watchdog:
+            kd: 5
+            kp: 1000.0
+            max_position: 15
+            min_position: -1.5
+            pos_percent_wanted: 0.9
+            soft_limit: 1.0
+            torque_offset: 0
+        savgol_coeffs:
+        - 34.18803419
+        - 25.64102564
+        - 17.09401709
+        - 8.54700855
+        - 0.0
+        - -8.54700855
+        - -17.09401709
+        - -25.64102564
+        - -34.18803419
+      mapping:
+        200: right_shoulder_pitch
+        201: right_shoulder_roll
+        202: right_shoulder_yaw
+        203: right_elbow
+        204: right_wrist_yaw
+        205: right_wrist_pitch
+        206: right_wrist_roll
+      cls: PolishNoROS
+  teleops:
+    commands:
+      cls: KeyboardTeleop
+      name: Keyboard_Command
+      topic_name: /keyboard_teleop
+    joystick_commands:
+      cls: JoystickTeleop
+      name: Joystick_Command
+      topic_name: /joystick_teleop
+networks:
+  main:
+    cls: SetActionSeries
+    name: set_actions
+    loop_back: false
+    read_colum: true
+    experiment_file: /home/robot/Documents/Motion/Wrist_Exp_Adi/right_wrist_yaw_sine.csv
+    candle_params:
+      baudrate: 1M
+      bus_type: USB
+    visible_dofs:
+    - right_shoulder_pitch
+    - right_shoulder_roll
+    - right_shoulder_yaw
+    - right_elbow
+    - right_wrist_yaw
+    - right_wrist_pitch
+    - right_wrist_roll
+    default_dof_pos:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    observations:
+      visible_delta_dof:
+        default_value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        function: get_visible_dof_pos
+        obs_scale: 4.0
+        noise_scale_mul:
+        - 1.0
+        - 1.0
+        noise_scale_add:
+        - -0.0
+        - 0.0
+        update_freq: 200
+        delay: 0.0
+        max_delay: 0.02
+        size: 10
+      visible_dof_vel:
+        default_value:
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        - 0.0
+        function: get_visible_dof_vel
+        obs_scale: 1.0
+        noise_scale_mul:
+        - 1.0
+        - 1.0
+        noise_scale_add:
+        - -0.0
+        - 0.0
+        update_freq: 200
+        delay: 0.0
+        max_delay: 0.02
+        size: 10
+frequency: 30
+motors_pub: motors/actions

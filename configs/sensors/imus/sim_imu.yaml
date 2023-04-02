@@ -1,0 +1,12 @@
+#base_link:
+#  cls: IMU_sim
+#  topics: ["/imu_sim/data"]
+
+#base_link:
+#  cls: UM7
+#  topics: ["/imu/data"]
+
+base_link:
+  cls: IMU_sim
+  topics: ["/imu/data"]
+  emma: false

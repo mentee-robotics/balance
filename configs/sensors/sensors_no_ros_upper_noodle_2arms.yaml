@@ -1,0 +1,6 @@
+defaults:
+  - motors: ["upper_body_motor_no_ros_noodle_2arms"]
+#  - imus: ["sim_imu"]             #value!
+#  # - distances: ["default"]        #value!
+  - teleops: ["default"]          #value!
+#  - contact: ["default"]          #value!

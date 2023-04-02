@@ -1,0 +1,2 @@
+defaults:
+  - lower_body: "sim_no_ros"

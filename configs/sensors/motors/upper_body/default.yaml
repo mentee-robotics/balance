@@ -1,0 +1,12 @@
+defaults:
+  - ../init_position@init_position: ["default_upper_pos"]
+  - ../joints_params@joints_params: ["default_upper_joints"]
+  - ../mapping@mapping: ["default_upper_mapping"]
+#  - ../pid_params@pid_params: ["default"]
+
+
+#NEW 31.1.23: For new arm experimental setup, new upper joints was added to:
+  #1. motors/default.yaml - junk values
+  #2  init_position/default.yaml - junk values
+  #3  joints_params/default.yaml - junk values
+  #4. mapping

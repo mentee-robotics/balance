@@ -1,0 +1,21 @@
+dofs:
+  cls: DofStateManagerROS
+  motors: ${...sensors.motors}
+rigid_bodies:
+  cls: RigidBodyStateManager
+  imus: ${...sensors.imus}
+distance:
+  cls: DistanceStateManager
+  sensors: ${...sensors.distances}
+command:
+  cls: CommandStateHandler
+  command: ${...sensors.teleops}
+joy_command:
+  cls: JoystickCommandStateHandler
+  command: ${...sensors.teleops}
+contact:
+  cls: ContactStateManager
+  sensors: ${...sensors.contact}
+#grippers:
+#  cls: BaseGripperStateManager
+#  sensors: ${...sensors.grippers}

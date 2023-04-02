@@ -1,0 +1,18 @@
+#base_link:
+#  cls: IMU_sim
+#  topics: ["/imu_sim/data"]
+
+#base_link:
+#  cls: UM7
+#  topics: ["/imu/data"]
+
+base_link:
+  cls: MTI630
+  topics: ["/imu/data"]
+#  topics: ["/imu/kalman_filter"]
+  emma: false
+
+# base_link:
+#   cls: IMUStateEstimation
+#   topics: ["/imu/state_estimate"]   #["/imu/data"]
+#   emma: false

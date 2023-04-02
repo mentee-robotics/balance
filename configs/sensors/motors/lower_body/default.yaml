@@ -1,0 +1,5 @@
+defaults:
+  - ../init_position@init_position: ["default"]
+  - ../joints_params@joints_params: ["default"]
+  - ../mapping@mapping: ["default"]
+#  - ../pid_params@pid_params: ["default"]

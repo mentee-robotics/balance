@@ -1,0 +1,7 @@
+defaults:
+  - motors: ["lower_body_sim_no_ros"]
+  - imus: ["sim_imu"]
+  - distances: ["default"]
+  - teleops: ["default"]
+  - contact: ["default"]
+  - grippers: ["default"]

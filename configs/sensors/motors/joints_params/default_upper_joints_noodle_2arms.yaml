@@ -1,0 +1,292 @@
+right_shoulder_pitch:
+  init_params:
+    default_kd: 50
+    default_kp: 100
+    default_max_torque: 90.0
+    init_kd: 50
+    init_kp: 50
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+right_shoulder_roll:
+  init_params:
+    default_kd: 50 # 115 was the limit for motor shut dawn
+    default_kp: 100
+    default_max_torque: 90.0
+    init_kd: 50
+    init_kp: 50
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+right_shoulder_yaw:
+  init_params:
+    default_kd: 40
+    default_kp: 70
+    default_max_torque: 50.0
+    init_kd: 50
+    init_kp: 50
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+
+right_elbow:
+  init_params:
+    default_kd: 40
+    default_kp: 70
+    default_max_torque: 30.0
+    init_kd: 50
+    init_kp: 50
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+right_wrist_pitch:
+  init_params:
+    default_kd: 0.15 #0.15
+    default_kp: 30 #8
+    default_max_torque: 50.0
+    init_kd: 0.15
+    init_kp: 30
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 0.2
+    min_position: -0.2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+right_wrist_yaw:
+  init_params:
+    default_kd: 0.15 #0.15
+    default_kp: 30 #8
+    default_max_torque: 50.0
+    init_kd: 0.15
+    init_kp: 30
+  kalman_filter:
+      pos_variance: 8.2e-08
+      transition_factor: 0.01
+      vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 0.2
+    min_position: -0.2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+right_wrist_roll:
+  init_params:
+    default_kd: 0.7
+    default_kp: 5
+    default_max_torque: 10.0 #50.0
+    init_kd: 0.7
+    init_kp: 5
+  kalman_filter:
+      pos_variance: 8.2e-08
+      transition_factor: 0.01
+      vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+left_shoulder_pitch:
+  init_params:
+    default_kd: 0
+    default_kp: 0
+    default_max_torque: 90.0
+    init_kd: 0
+    init_kp: 0
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+left_shoulder_roll:
+  init_params:
+    default_kd: 0 # 115 was the limit for motor shut dawn
+    default_kp: 0
+    default_max_torque: 90.0
+    init_kd: 0
+    init_kp: 0
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+left_shoulder_yaw:
+  init_params:
+    default_kd: 0
+    default_kp: 0
+    default_max_torque: 50.0
+    init_kd: 0
+    init_kp: 0
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+
+left_elbow:
+  init_params:
+    default_kd: 0
+    default_kp: 0
+    default_max_torque: 30.0
+    init_kd: 0
+    init_kp: 0
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+left_wrist_pitch:
+  init_params:
+    default_kd: 0.0 #0.15
+    default_kp: 0 #8
+    default_max_torque: 50.0
+    init_kd: 0
+    init_kp: 0
+  kalman_filter:
+    pos_variance: 8.2e-08
+    transition_factor: 0.01
+    vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 0.2
+    min_position: -0.2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+left_wrist_yaw:
+  init_params:
+    default_kd: 0.0 #0.15
+    default_kp: 0 #8
+    default_max_torque: 50.0
+    init_kd: 0
+    init_kp: 0
+  kalman_filter:
+      pos_variance: 8.2e-08
+      transition_factor: 0.01
+      vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 0.2
+    min_position: -0.2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+left_wrist_roll:
+  init_params:
+    default_kd: 0.
+    default_kp: 0
+    default_max_torque: 10.0 #50.0
+    init_kd: 00
+    init_kp: 0
+  kalman_filter:
+      pos_variance: 8.2e-08
+      transition_factor: 0.01
+      vel_variance: 4.05e-05
+  watchdog:
+    kd: 5
+    kp: 1000.0
+    max_position: 2
+    min_position: -2
+    pos_percent_wanted: 0.9
+    soft_limit: 1.0
+    torque_offset: 0
+
+savgol_coeffs:
+- 34.18803419
+- 25.64102564
+- 17.09401709
+- 8.54700855
+- 0.0
+- -8.54700855
+- -17.09401709
+- -25.64102564
+- -34.18803419
