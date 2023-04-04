@@ -1,0 +1,213 @@
+lower_body:
+  cls: PolishNoROS
+  init_position:
+    left_ankle_pitch: 0.0
+    left_ankle_roll: 0.0
+    left_hip_pitch: -0.0
+    left_hip_roll: -0.0
+    left_hip_yaw: 0.0
+    left_knee: 0.0
+    right_ankle_pitch: -0.0
+    right_ankle_roll: -0.0
+    right_hip_pitch: 0.0
+    right_hip_roll: 0.0
+    right_hip_yaw: 0.0
+    right_knee: -0.0
+
+  joints_params:
+    left_ankle_pitch:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 50.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000.0
+        max_position: 0.7
+        min_position: -0.7
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    left_ankle_roll:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 10.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5.0
+        kp: 1000
+        max_position: 0.35
+        min_position: -0.35
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    left_hip_pitch:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 50.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000
+        max_position: 0.92
+        min_position: -0.92
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    left_hip_roll:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 30.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000.0
+        max_position: 0.2
+        min_position: -0.2
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    left_hip_yaw:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 30.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000
+        max_position: 0.21
+        min_position: -0.21
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    left_knee:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 50.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000.0
+        max_position: 0.87
+        min_position: -0.87
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    right_ankle_pitch:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 50.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000.0
+        max_position: 0.7
+        min_position: -0.7
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    right_ankle_roll:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 10.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5.0
+        kp: 1000
+        max_position: 0.35
+        min_position: -0.35
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    right_hip_pitch:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 50.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5.0
+        kp: 1000.0
+        max_position: 0.92
+        min_position: -0.92
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    right_hip_roll:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 30.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000.0
+        max_position: 0.2
+        min_position: -0.2
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    right_hip_yaw:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 30.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000
+        max_position: 0.21
+        min_position: -0.21
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+    right_knee:
+      init_params:
+        default_kd: 5.0
+        default_kp: 50.0
+        default_max_torque: 50.0
+        init_kd: 5.0
+        init_kp: 100
+      watchdog:
+        kd: 5
+        kp: 1000
+        max_position: 0.87
+        min_position: -0.87
+        pos_percent_wanted: 0.9
+        soft_limit: 1.0
+        torque_offset: 0
+  mapping:
+    100: left_hip_yaw
+    101: left_hip_roll
+    102: left_hip_pitch
+    103: left_knee
+    104: left_ankle_pitch
+    105: left_ankle_roll
+    106: right_hip_yaw
+    107: right_hip_roll
+    108: right_hip_pitch
+    109: right_knee
+    110: right_ankle_pitch
+    111: right_ankle_roll
+  topics:
+    pub: /md80/motion_command
+    sub: /md80/joint_states

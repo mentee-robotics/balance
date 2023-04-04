@@ -1,0 +1,9 @@
+commands:
+  cls: KeyboardTeleop
+  name: Keyboard_Command
+  topic_name: "/keyboard_teleop"
+
+joystick_commands:
+  cls: JoystickTeleop
+  name: Joystick_Command
+  topic_name: "/joystick_teleop"

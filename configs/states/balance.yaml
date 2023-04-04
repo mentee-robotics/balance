@@ -2,9 +2,9 @@ dofs:
   cls: DofStateManagerNoROS
   motors: ${...sensors.motors}
   
-rigid_bodies:
-  cls: RigidBodyStateManager
-  imus: ${...sensors.imus}
+# rigid_bodies:
+#   cls: RigidBodyStateManager
+#   imus: ${...sensors.imus}
 
 command:
   cls: CommandStateHandler

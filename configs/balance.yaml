@@ -1,0 +1,7 @@
+defaults:
+  - states: ["balance"]
+  - sensors: ["balance"]
+  # - networks: ["standing"]
+
+frequency: 60
+motors_pub: "motors/actions"

@@ -21,7 +21,7 @@
             "justMyCode": true,
             "args": [
                 "--yaml",
-                "/home/administrator/code/ros2_workspace/balance/configs/default.yaml"
+                "/home/administrator/code/ros2_workspace/balance/configs/noah_noodle.yaml"
             ],
             // "cwd": "/home/administrator/code/ros2_workspace/menteebot/",
             // "env": 

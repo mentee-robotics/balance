@@ -23,7 +23,7 @@ from omegaconf import OmegaConf
 from rich.console import Console
 from rich.live import Live
 from sensor_msgs.msg import Imu, JointState, Joy
-from menteebot.sensors.imus.datatypes import CoordSys
+from mentee_balance.sensors.imus.datatypes import CoordSys
 from std_srvs.srv import SetBool
 from std_msgs.msg import Header
 from builtin_interfaces.msg import Time

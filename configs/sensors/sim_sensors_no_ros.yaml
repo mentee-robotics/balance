@@ -1,5 +1,5 @@
 defaults:
-  - motors: ["lower_body_sim_no_ros"]
+  - motors: ["default"]
   - imus: ["sim_imu"]
   - distances: ["default"]
   - teleops: ["default"]
